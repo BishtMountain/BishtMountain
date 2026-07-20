@@ -1,1 +1,1 @@
-console.log('BishtMount loaded');
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{}));

@@ -1,7 +1,19 @@
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:#0b1220;color:#fff}
-.container{max-width:1200px;margin:auto;padding:70px 20px}.nav{display:flex;justify-content:space-between;align-items:center}
-header{position:fixed;width:100%;background:#08101bdd}nav a{color:#fff;text-decoration:none;margin-left:20px}span{color:#f4b400}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
-.overlay{max-width:800px}.overlay h1{font-size:clamp(3rem,7vw,5rem)}.btn{display:inline-block;background:#f4b400;color:#111;padding:12px 24px;border-radius:30px;margin-top:20px;text-decoration:none}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}.card{background:#182235;border-radius:12px;overflow:hidden}.card img{width:100%;height:180px;object-fit:cover}.card h3,.card p{padding:10px}footer{text-align:center;padding:30px;background:#08101b}
-@media(max-width:768px){.nav{flex-direction:column}nav{margin-top:10px}}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#08111f;color:#fff;line-height:1.6}
+.header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(0,0,0,.45);backdrop-filter:blur(8px)}
+.logo{font-size:28px;font-weight:bold;color:#f8b400}
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
+.content{max-width:850px;padding:20px}
+.content h1{font-size:64px;margin:10px 0}
+.content h3{color:#f8b400}
+.btn{display:inline-block;background:#f8b400;color:#111;padding:14px 26px;border-radius:30px;margin:10px;text-decoration:none;font-weight:bold}
+.outline{background:transparent;color:#fff;border:2px solid #fff}
+section{padding:90px 10%;max-width:1100px;margin:auto}
+footer{text-align:center;padding:30px;background:#050b15}
+@media(max-width:768px){
+.header{flex-direction:column}
+nav{margin-top:10px}
+.content h1{font-size:42px}
+}
