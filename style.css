@@ -1,24 +1,705 @@
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#0b1320;color:#fff}
-.nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(0,0,0,.45);backdrop-filter:blur(10px)}
-.logo{font-size:28px;font-weight:700;color:#f0b400}
-.nav a{color:#fff;text-decoration:none;margin-left:18px}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.75)),url('513117007_10236675873139768_3732020298779891188_n.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center}
-.overlay{padding:20px}
-.since{letter-spacing:4px;color:#f0b400}
-h1{font-size:clamp(46px,7vw,80px);margin:10px 0}
-.btns{margin-top:25px}
-.btn{display:inline-block;padding:14px 26px;border-radius:30px;background:#f0b400;color:#111;text-decoration:none;font-weight:bold;margin:8px}
-.outline{background:transparent;color:#fff;border:2px solid #fff}
-.wrap{max-width:1200px;margin:auto;padding:90px 24px}
-.about{display:grid;grid-template-columns:340px 1fr;gap:50px;align-items:center}
-.photo{height:420px;border:2px dashed #666;border-radius:20px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:#16233b}
-.stats,.cards,.timeline{display:grid;gap:18px}
-.stats{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:30px}
-.stats div,.cards div,.timeline div{background:#17243a;padding:22px;border-radius:16px;text-align:center}
-.cards{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:25px}
-.cards div{height:170px;display:flex;align-items:end;justify-content:center;font-size:22px;font-weight:bold}
-.timeline{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:25px}
-footer{text-align:center;padding:30px;background:#060b14}
-@media(max-width:800px){.about{grid-template-columns:1fr}}
+/* ===================================================
+   BISHTMOUNTAIN
+   Ride Beyond Every Pass
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0d1117;
+    color:#ffffff;
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+/* =========================
+   Container
+========================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
+
+.nav-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+
+    color:#8fd14f;
+
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:url("images/hero.jpg") center center/cover no-repeat;
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+
+    max-width:900px;
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+}
+
+.hero h2{
+
+    font-size:34px;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:#ddd;
+
+    margin-bottom:35px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 34px;
+
+    border-radius:40px;
+
+    background:#8fd14f;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(143,209,79,.35);
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    color:#fff;
+
+    border:2px solid #fff;
+}
+
+.btn-outline:hover{
+
+    background:#fff;
+
+    color:#111;
+}
+
+/* =========================
+   About
+========================= */
+
+.about{
+
+    padding:110px 0;
+
+    background:#111827;
+}
+
+.about .container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    display:block;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.about-content h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+}
+
+.about-content p{
+
+    margin-bottom:18px;
+
+    color:#d8d8d8;
+
+    font-size:17px;
+}
+/* =========================
+   Journey
+========================= */
+
+.journey{
+
+    padding:110px 0;
+
+    background:#0d1117;
+
+    text-align:center;
+}
+
+.journey h2{
+
+    font-size:42px;
+
+    margin-bottom:60px;
+}
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+}
+
+.timeline-item{
+
+    background:#161b22;
+
+    padding:35px 25px;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.timeline-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#8fd14f;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.timeline-item h3{
+
+    color:#8fd14f;
+
+    font-size:32px;
+
+    margin-bottom:15px;
+}
+
+.timeline-item p{
+
+    color:#ddd;
+
+    font-size:16px;
+}
+
+/* =========================
+   Expeditions
+========================= */
+
+.expeditions{
+
+    padding:110px 0;
+
+    background:#111827;
+}
+
+.expeditions h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+}
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.card{
+
+    background:#1b2430;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+    border-color:#8fd14f;
+}
+
+.card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.card h3{
+
+    padding:22px 22px 10px;
+
+    font-size:24px;
+}
+
+.card p{
+
+    padding:0 22px 28px;
+
+    color:#cfcfcf;
+}
+
+/* =========================
+   Social Sections
+========================= */
+
+.social-section{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:#0d1117;
+}
+
+.social-section h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+.social-section p{
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+    color:#d5d5d5;
+
+    font-size:18px;
+}
+
+/* =========================
+   Contact
+========================= */
+
+.contact{
+
+    padding:110px 0;
+
+    text-align:center;
+
+    background:#111827;
+}
+
+.contact h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+.contact p{
+
+    color:#ddd;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+}
+
+.contact h3{
+
+    margin-bottom:35px;
+
+    font-size:24px;
+}
+
+.contact a{
+
+    color:#8fd14f;
+
+    text-decoration:none;
+}
+
+.contact a:hover{
+
+    text-decoration:underline;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    background:#05080d;
+
+    padding:45px 0;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h2{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+}
+
+footer p{
+
+    color:#aaa;
+
+    margin:6px 0;
+}
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width:992px){
+
+    .about .container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+    }
+
+    .about-image{
+
+        order:-1;
+    }
+
+    .hero h1{
+
+        font-size:56px;
+    }
+
+    .hero h2{
+
+        font-size:28px;
+    }
+
+    .navbar{
+
+        padding:18px 5%;
+    }
+
+    .nav-links{
+
+        gap:18px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+    }
+
+    .hero{
+
+        padding:0 20px;
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+        letter-spacing:2px;
+    }
+
+    .hero h2{
+
+        font-size:24px;
+    }
+
+    .hero p{
+
+        font-size:17px;
+    }
+
+    .about,
+    .journey,
+    .expeditions,
+    .social-section,
+    .contact{
+
+        padding:80px 0;
+    }
+
+    .about-content h2,
+    .journey h2,
+    .expeditions h2,
+    .social-section h2,
+    .contact h2{
+
+        font-size:34px;
+    }
+
+    .card img{
+
+        height:220px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .btn{
+
+        width:230px;
+
+        text-align:center;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:34px;
+    }
+
+    .hero h2{
+
+        font-size:20px;
+    }
+
+    .hero p{
+
+        font-size:15px;
+    }
+
+    .logo{
+
+        font-size:20px;
+    }
+
+    .nav-links{
+
+        gap:12px;
+
+        font-size:14px;
+    }
+
+    .timeline{
+
+        grid-template-columns:1fr;
+    }
+
+    .card-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .container{
+
+        width:92%;
+    }
+
+}
+
+/* =========================
+   Smooth Animation
+========================= */
+
+.card,
+.timeline-item,
+.btn{
+
+    transition:all .35s ease;
+}
+
+section{
+
+    scroll-margin-top:90px;
+}
+
+img{
+
+    max-width:100%;
+}
+
+::selection{
+
+    background:#8fd14f;
+
+    color:#111;
+}
