@@ -1,1 +1,1 @@
-console.log('BishtMount V1.1');
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{}));
