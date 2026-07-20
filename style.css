@@ -104,7 +104,7 @@ header{
 
     text-align:center;
 
-    background:url("images/hero.jpg") center center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("https://picsum.photos/1920/1080") center center/cover no-repeat;
 }
 
 .overlay{
