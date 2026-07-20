@@ -1,1 +1,1 @@
-console.log('BishtMount V1.1');
+// future animations
