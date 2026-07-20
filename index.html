@@ -3,101 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BishtMountain | Travel Creator</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,sans-serif;background:#0b1220;color:#eef2ff;line-height:1.6}
-header{position:sticky;top:0;background:#0b1220dd;backdrop-filter:blur(10px);z-index:10}
-nav{max-width:1200px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:28px;font-weight:700;color:#7dd3fc}
-nav ul{display:flex;gap:20px;list-style:none}
-nav a{text-decoration:none;color:#fff}
-.hero{min-height:85vh;display:grid;place-items:center;text-align:center;padding:40px;background:
-linear-gradient(rgba(5,10,20,.55),rgba(5,10,20,.7)),
-url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover}
-.hero h1{font-size:clamp(2.5rem,6vw,5rem)}
-.hero p{max-width:700px;margin:20px auto;color:#dbeafe}
-.btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
-.btn{padding:14px 24px;border-radius:40px;text-decoration:none;font-weight:600}
-.insta{background:#e1306c;color:#fff}
-.yt{background:#ff0000;color:#fff}
-.section{max-width:1200px;margin:auto;padding:70px 20px}
-h2{text-align:center;margin-bottom:30px;font-size:2rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#162032;border:1px solid #243047;border-radius:18px;padding:24px;transition:.3s}
-.card:hover{transform:translateY(-6px)}
-.card h3{margin-bottom:10px;color:#7dd3fc}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
-.stat{background:#162032;padding:24px;border-radius:18px}
-footer{text-align:center;padding:30px;background:#111827;color:#b8c0d9}
-@media(max-width:768px){
-nav{flex-direction:column;gap:12px}
-nav ul{flex-wrap:wrap;justify-content:center}
-.stats{grid-template-columns:repeat(2,1fr)}
-}
-</style>
+<title>BishtMount | Since 2015</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
+<div class="container nav">
+<h2>BishtMount <span>Since 2015</span></h2>
 <nav>
-<div class="logo">BishtMountain</div>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#travel">Travel</a></li>
-<li><a href="#videos">Videos</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<a href="#about">About</a>
+<a href="#expeditions">Expeditions</a>
+<a href="#timeline">Journey</a>
+<a href="https://www.youtube.com/@BishtMountain" target="_blank">YouTube</a>
 </nav>
+</div>
 </header>
 
 <section class="hero">
-<div>
-<h1>Hemant Singh Bisht</h1>
-<h3>Digital Creator • Solo & Group Traveller</h3>
-<p>Exploring mountains, hidden roads, camping destinations, snow adventures and unforgettable road trips. Follow the journey and discover your next adventure.</p>
-<div class="btns">
-<a class="btn insta" href="https://instagram.com/BishtMountain" target="_blank">Instagram @BishtMountain</a>
-<a class="btn yt" href="https://youtube.com/@BishtMountain" target="_blank">YouTube @BishtMountain</a>
-</div>
+<div class="overlay">
+<h5>Adventure Since 2015</h5>
+<h1>Ride Beyond Every Pass</h1>
+<p>From the first Ladakh motorcycle expedition in 2015 to Spiti Valley, Migla Pass, Hanle, Umling La, Nepal Ride and Om Parvat.</p>
+<a class="btn" href="#expeditions">Explore</a>
 </div>
 </section>
 
-<section class="section" id="about">
+<section id="about" class="container">
 <h2>About</h2>
+<p>BishtMount documents Himalayan adventures through motorcycle expeditions, road trips, camping and unforgettable journeys.</p>
+</section>
+
+<section id="expeditions" class="container">
+<h2>Featured Expeditions</h2>
 <div class="grid">
-<div class="card"><h3>Road Trips</h3><p>Epic drives across scenic highways and mountain passes.</p></div>
-<div class="card"><h3>Camping</h3><p>Self camping, bonfires and peaceful nights under the stars.</p></div>
-<div class="card"><h3>Trekking</h3><p>Easy to moderate treks with breathtaking landscapes.</p></div>
-<div class="card"><h3>Adventure</h3><p>Snow drives, off-road trails and hidden destinations.</p></div>
+<div class="card"><img src="https://picsum.photos/600/400?1"><h3>Ladakh</h3><p>Where the journey began in 2015.</p></div>
+<div class="card"><img src="https://picsum.photos/600/400?2"><h3>Spiti Valley</h3><p>Epic Himalayan roads.</p></div>
+<div class="card"><img src="https://picsum.photos/600/400?3"><h3>Migla Pass</h3><p>One of the newest Himalayan routes.</p></div>
+<div class="card"><img src="https://picsum.photos/600/400?4"><h3>Hanle</h3><p>Dark skies and peaceful landscapes.</p></div>
+<div class="card"><img src="https://picsum.photos/600/400?5"><h3>Umling La</h3><p>Ride among the world's highest roads.</p></div>
+<div class="card"><img src="https://picsum.photos/600/400?6"><h3>Nepal Ride</h3><p>Cross-border adventure.</p></div>
+<div class="card"><img src="https://picsum.photos/600/400?7"><h3>Om Parvat</h3><p>Spiritual Himalayan destination.</p></div>
 </div>
 </section>
 
-<section class="section" id="travel">
-<h2>Highlights</h2>
-<div class="stats">
-<div class="stat"><h3>🏕️</h3><p>Camping</p></div>
-<div class="stat"><h3>🚙</h3><p>Road Trips</p></div>
-<div class="stat"><h3>🥾</h3><p>Trekking</p></div>
-<div class="stat"><h3>📷</h3><p>Content Creation</p></div>
-</div>
+<section id="timeline" class="container">
+<h2>Journey Timeline</h2>
+<ul>
+<li><b>2015</b> - First Ladakh Ride</li>
+<li><b>2016-2021</b> - Himalayan Exploration</li>
+<li><b>2022-2024</b> - Spiti & Nepal</li>
+<li><b>2025+</b> - Hanle, Umling La, Migla Pass & Om Parvat</li>
+</ul>
 </section>
 
-<section class="section" id="videos">
-<h2>Latest Adventures</h2>
-<div class="grid">
-<div class="card"><h3>Snow Escape</h3><p>Add your latest YouTube video or Blogger post here.</p></div>
-<div class="card"><h3>Mountain Drive</h3><p>Replace with your road trip article.</p></div>
-<div class="card"><h3>Weekend Camp</h3><p>Feature your camping experience.</p></div>
-</div>
-</section>
-
-<footer id="contact">
-<h2>BishtMountain</h2>
-<p>Digital Creator • Solo & Group Traveller</p>
-<p style="margin-top:10px">© 2026 BishtMountain. All Rights Reserved.</p>
-</footer>
+<footer>Instagram @BishtMountain • YouTube @BishtMountain<br>© BishtMount</footer>
 </body>
 </html>
